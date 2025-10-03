@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Simple implementation -->
+    <div id="app">
+      <button @click="count++">Count: {{ count }}</button>
+    </div>
+    <!-- Click to change -->
+    <div id="app1">
+      <button @click="count--">Count: {{ count }}</button>
+    </div>
+    <!-- Template from Vue js file -->
+    <div id="app2"></div>
+    <!-- v-on directive -->
+    <div id="app3">
+      <p>Name: {{ name }}</p>
+      <p>Age: {{ age }}</p>
+      <p>Job: {{ job }}</p>
+      <button v-on:click="changeName('Rahul')">Change Name</button>
+      <button v-on:click="changeAge(28)">Change Age</button>
+      <button v-on:click="changeJob('Sr. Software Engineer')">Change Job</button>
+    </div>
+    <!-- shorthand for the bind directive -->
+    <div id="app4">
+      <p :style>{{ name }}</p>
+      <button @click="changeName('Rahul')">Change Name</button>
+    </div>
+    <!-- Expression and statements -->
+    <div id="app5">
+      <p :style>{{ condition ? 'green' : 'red' }}</p>
+      <br>
+      <br>
+      <button @click="changeCondition()">Change Condition</button>
+    </div>
+    <!-- v-if directive -->
+    <div id="app6">
+      <p v-if="seen">Now you see me</p>
+      <button v-on:click="changeSee">Change See</button>
+    </div>
+    <br>
+    <div id="app7">
+      <button @click="increment()">Count: {{ count }}</button>
+    </div>
+  </body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
