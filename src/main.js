@@ -127,3 +127,25 @@ const app8 = createApp({
 })
 
 app8.mount('#app7')
+
+// mutate deep
+const app9 = createApp({
+    data(){
+        return {
+            obj : {
+                name: "Rohan",
+                age: 27,
+                job: "Software Engineer"
+            }
+        }
+    },
+
+    methods:{
+        changeDetails(){
+            this.obj.name = "Rahul"
+            this.obj.age = 28
+            this.obj.job = "Software Engineer"
+        }
+    }
+})
+app9.mount('#app8')
